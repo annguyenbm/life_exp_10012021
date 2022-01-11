@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Binh Minh An Nguyen"
+date: "12/16/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+```{r}
+q1_2020 <- read_csv("~/Documents/EMMA/price_2020.csv")
+nov_2020 <- read_csv("~/Documents/EMMA/price_Nov2020.csv")
+
+View(q1_2020)
+View(nov_2020)
+```
+
+
+```{r}
+q1_2020 %>% 
+  select(Imp.Country, `PRICE 2`, VOLUME, GOODS) %>% 
+  arrange(Imp.Country)
+```
+
+
